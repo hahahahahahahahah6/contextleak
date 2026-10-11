@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "contextleak"
+version = "0.1.0"
+description = "Check which sensitive files your Docker build context would leak into the image"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "hao li" }]
+keywords = ["docker", "dockerignore", "security", "secrets", "build-context"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+    "Topic :: Software Development :: Build Tools",
+]
+
+[project.scripts]
+contextleak = "contextleak.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/hahahahahahahahah6/contextleak"
+
+[tool.setuptools.packages.find]
+where = ["src"]
